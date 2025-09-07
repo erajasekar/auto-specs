@@ -30,7 +30,7 @@ export async function searchCarSpecs(carModel: string): Promise<CarSpec | null> 
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'llama-3.1-sonar-small-128k-online',
+        model: 'sonar',
         messages: [
           {
             role: 'user',
