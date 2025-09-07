@@ -91,7 +91,7 @@ export function CarSpecCard({
             className="object-cover"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.src = `https://via.placeholder.com/400x300/e5e7eb/6b7280?text=${encodeURIComponent(carSpec.make + ' ' + carSpec.model)}`;
+              target.src = `https://picsum.photos/400/300?random=${encodeURIComponent(carSpec.make + carSpec.model).replace(/[^a-zA-Z0-9]/g, '')}`;
             }}
           />
         </div>

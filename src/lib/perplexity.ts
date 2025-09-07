@@ -91,7 +91,7 @@ function parseCarSpecsFromResponse(content: string, searchTerm: string): CarSpec
     mpg,
     transmission,
     drivetrain,
-    imageUrl: `https://via.placeholder.com/400x300?text=${encodeURIComponent(make + ' ' + model)}`
+    imageUrl: `https://picsum.photos/400/300?random=${encodeURIComponent(make + model).replace(/[^a-zA-Z0-9]/g, '')}`
   };
 }
 
@@ -114,7 +114,7 @@ function getPlaceholderData(carModel: string): CarSpec {
       mpg: '32 combined',
       transmission: '8-Speed Automatic',
       drivetrain: 'FWD',
-      imageUrl: 'https://via.placeholder.com/400x300?text=Toyota+Camry'
+      imageUrl: 'https://picsum.photos/400/300?random=ToyotaCamry'
     },
     'honda civic': {
       make: 'Honda',
@@ -127,7 +127,7 @@ function getPlaceholderData(carModel: string): CarSpec {
       mpg: '35 combined',
       transmission: 'CVT',
       drivetrain: 'FWD',
-      imageUrl: 'https://via.placeholder.com/400x300?text=Honda+Civic'
+      imageUrl: 'https://picsum.photos/400/300?random=HondaCivic'
     },
     'bmw 3 series': {
       make: 'BMW',
@@ -140,7 +140,7 @@ function getPlaceholderData(carModel: string): CarSpec {
       mpg: '30 combined',
       transmission: '8-Speed Automatic',
       drivetrain: 'RWD',
-      imageUrl: 'https://via.placeholder.com/400x300?text=BMW+3+Series'
+      imageUrl: 'https://picsum.photos/400/300?random=BMW3Series'
     }
   };
 
@@ -156,6 +156,6 @@ function getPlaceholderData(carModel: string): CarSpec {
     mpg: 'Unknown',
     transmission: 'Unknown',
     drivetrain: 'Unknown',
-    imageUrl: `https://via.placeholder.com/400x300?text=${encodeURIComponent(carModel)}`
+    imageUrl: `https://picsum.photos/400/300?random=${encodeURIComponent(carModel).replace(/[^a-zA-Z0-9]/g, '')}`
   };
 }
